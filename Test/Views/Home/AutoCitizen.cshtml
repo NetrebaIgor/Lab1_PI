@@ -1,0 +1,67 @@
+﻿@model Test.Models.InsuranceAutoCitizen;
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Автоцивілка</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/autocivil.css" />
+</head>
+
+
+<body>
+    <div id="order">
+        <div class="container">
+            <form asp-action="autocitizen" asp-controller="home">
+                <div class="form-group">
+                    <label asp-for="NSF" class="control-label">Прізвище Ім'я По батькові</label>
+                    <input type="text" asp-for="NSF" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Engine" type="radio" value="до 1,6л" /><span>до 1,6 л</span> <br />
+                    <input asp-for="Engine" type="radio" value="1,6 - 2л" /><span> 1,6 - 2 л</span> <br />
+                    <input asp-for="Engine" type="radio" value="2 - 3л" /><span>2 - 3 л</span> <br />
+                    <input asp-for="Engine" type="radio" value="більш 3л" /><span>більш 3 л</span>
+
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label">Дата початку</label>
+                    <input type="date" asp-for="Date" id="datepicker" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label asp-for="City" class="control-label">Місто</label>
+                    <input type="text" asp-for="City" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="RoadAccident" class="control-label">Франшиза: </label>
+                    <select asp-for="RoadAccident" class="form-control">
+                        <option value="0" selected="selected">0 грн. </option>
+                        <option value="100 000">+ 100 000 грн.</option>
+                        <option value="200 000">+ 200 000 грн.</option>
+                        <option value="300 000">+ 300 000 грн.</option>
+                        <option value="400 000">+ 400 000 грн.</option>
+                        <option value="500 000">+ 500 000 грн.</option>
+                        <option value="600 000">+ 600 000 грн.</option>
+                        <option value="750 000">+ 750 000 грн.</option>
+                        <option value="1 000 000">+ 1 000 000 грн.</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Franchise" class="control-label">Франшиза: </label>
+                    <select asp-for="Franchise" class="form-control">
+                        <option value="0" selected="selected">0 грн. </option>
+                        <option value="1300">1300 грн.</option>
+                        <option value="2600">2600 грн.</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Відправити" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>

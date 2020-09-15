@@ -1,0 +1,148 @@
+﻿@model Test.Models.InsuranceMedic;
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Медичне страхування</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/medic.css" />
+</head>
+
+<body>
+
+    <div id="order">
+        <div class="container">
+            <form asp-action="medics" asp-controller="home" class="form-order">
+                <div class="form-group">
+                    <input type="text" asp-for="NSF" class="form-control" placeholder="Прізвище Ім'я По батькові" />
+                </div>
+                <div class="form-group">
+                    <input type="text" asp-for="Email" class="form-control" placeholder="E-mail" />
+                </div>
+                <div class="form-group">
+                    <input type="text" asp-for="Phone" class="form-control" placeholder="Телефон"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" asp-for="City" class="form-control" placeholder="Місто" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Clinic" class="control-label" style="color: white; text-align:center; ">Хочу обслуговуватися в:</label>
+                    <select asp-for="Clinic" class="form-control">
+                        <option value="Приватна клініка">Приватна клініка</option>
+                        <option value="Державна клініка">Державна клініка</option>
+                        <option value="Преміум клініка">Преміум клініка</option>
+                        <option selected="selected" disabled="disabled">Виберіть клініку</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Відправити" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+   
+
+
+    <div class="container">
+        <div id="explanation">
+
+            <div class="row">
+                <h1> Що покриває медичне страхування: </h1>
+
+                <div class="resp ">
+                    <h2>
+                        Амбулаторну допомогу
+                    </h2>
+                    <br />
+                    <ul>
+                        <li>
+                            Відвідування лікарів
+                        </li>
+                        <li>
+                            Отримання консультацій лікарів
+                        </li>
+                        <li>
+                            Профілактику лікувань
+                        </li>
+                        <li>
+                            Лікування в денному стаціонарі
+                        </li>
+                        <li> <b> Покриття медикаментів </b></li>
+                    </ul>
+                   
+                </div>
+
+                <div class="resp ">
+                    <h2>
+                        Швидку допомогу
+                    </h2>
+                    <br />
+                    <ul>
+                        <li>
+                            Виклик швидкої допомоги в межах 50 км за межами міста
+
+                        </li>
+                        <li>
+                            Виклик лікаря додому в межах 50 км за межами міста
+                        </li>
+                    </ul>
+                    
+                </div>
+
+                <div class="resp ">
+                    <h2>
+                        Екстренну допомогу
+                    </h2>
+                    <br />
+                    <ul>
+                        <li>
+                            Екстрена стоматологічна допомога
+                        </li>
+                        <li>
+                            Лікування гострих захворювань в найкоротші терміни
+                        </li>
+                        <li>
+                            Екстрена госпіталізація
+                        </li>
+                        <li> <b> Покриття медикаментів </b></li>
+                    </ul>
+                  
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="terms">
+        <div class="container">
+            <div class="row">
+                <h1> Умови страхування </h1>
+                <div class="col-sm">
+
+                    <p>
+                        <img src="https://img-android.lisisoft.com/imgmic/0/1/2310-i-com.chana.revisionTimer.jpg" align="bottom" border=0 class="virus_icon" width="100" height="100">
+                        <h2>Термін страхування</h2> <br />1 рік
+                    </p>
+                </div>
+
+                <div class="col-sm">
+
+                    <p>
+                        <img src="https://www.pngkey.com/png/full/386-3866881_children-family-father-kids-mother-parents-icon-stick.png" align="bottom" border=0 class="virus_icon" width="100" height="100">
+                        <h2>Застрахованим може бути</h2> <br />будь-яка людина від 0 до 65-ти років
+                    </p>
+                </div>
+                <div class="col-sm">
+
+                    <p>
+                        <img src="https://img.icons8.com/nolan/2x/cash.png" align="bottom" border=0 class="virus_icon" width="100" height="100">
+                        <h2>Сума на яку ви застраховані</h2> <br />до 210 000 грн
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
